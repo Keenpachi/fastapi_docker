@@ -1,0 +1,11 @@
+version: "2.29.2"
+
+services:
+  api:
+    build: .
+    container_name: fastapi-application
+    dockerfile: Dockerfile
+    ports:
+      - 8008:8000
+    command: uvicorn app.main:app --reload
+
