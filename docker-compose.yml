@@ -3,6 +3,7 @@ version: "2.29.2"
 services:
   api:
     build: .
+    image: fastapi
     ports:
       - 8008:8000
     restart: always

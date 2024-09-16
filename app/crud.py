@@ -40,5 +40,3 @@ def paginate_books_list(db: Session, page: int, size: int) -> list[Book]:
     statement: Executable = select(Book).offset((page-1)*size).limit(size)
     result: list[Book] = db.execute(statement).scalars().all()
     return result
-
-
